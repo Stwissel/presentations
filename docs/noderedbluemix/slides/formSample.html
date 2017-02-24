@@ -1,0 +1,99 @@
+<!--
+   demo.html
+
+   Copyright 2015 Stephan H Wissel <stw@sensei1404>
+
+   This program is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+   MA 02110-1301, USA.
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Demo</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <form role="form" method="post" action="https://things.dragontamer.net/api/new">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">NodeRED Form Demo</h3>
+      </div>
+      <div class="jumbotron">
+        <h1>RED is a lucky color</h1>
+        <p class="lead">With a little style, forms become simple</p>
+      </div>
+      <div class="row marketing">
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input name="username" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">?</span>
+            <input name="pwd" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon2">
+          </div>
+          <label class="form-element">
+            <input type="checkbox" name="bike" value="Bike" /> I have a bike</label>
+        </div>
+        <div class="col-md-4">
+          <label>
+            <input type="radio" name="gender" value="male" checked="checked" /> Male</label>
+          <br />
+          <label>
+            <input type="radio" name="gender" value="female" /> Female</label>
+        </div>
+        <div class="col-md-4">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Stars 1-5</span>
+            <input name="stars" type="number" class="form-control" min="1" max="5" aria-describedby="basic-addon3">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon4">URL</span>
+            <input name="where" type="url" class="form-control" min="1" max="5" placeholder="http://www.bluemix.net" aria-describedby="basic-addon4">
+          </div>
+        </div>
+      </div>
+      <div class="row marketing">
+        <div class="col-md-4">
+          <p>When you are ready</p>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-danger" type="submit"><span class="glyphicon glyphicon-flash"></span> GO!</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

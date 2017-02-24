@@ -1,0 +1,74 @@
+[
+    "index.md",
+    [
+        "agenda.md",
+        "you-me.md",
+        "me.md",
+        "you.md"
+    ],
+    [
+        "hype.md",
+        "hype1.html",
+        "hype2.html",
+        "cloud-is-a-mindset.md",
+        "cloud-everywhere.md",
+        "intheenterprise.md"
+    ],
+    [
+        "as-a-service.md",
+        "pizza.md"
+    ],
+    "standards.md",
+    [
+        {
+            "attr": {
+                "data-background": "slides/gorilla.jpg"
+            }
+        },
+        "players.md",
+        "players2.md",
+        "players3.md",
+        "realplayers.md"
+    ],
+    "openstack.md",
+    [
+        "cloudfoundry.md",
+        "buildpacks.md"
+    ],
+    [
+        "i-work-for-ibm.md",
+		"devops.md",
+        {
+            "attr": {
+                "data-background": "slides/bluemix1.png"
+            }
+        },
+        {
+            "attr": {
+                "data-background": "slides/bluemix2.png"
+            }
+        },
+        {
+            "attr": {
+                "data-background": "slides/bluemix3.png"
+            }
+        },
+        {
+            "attr": {
+                "data-background": "slides/bluemix4.png"
+            }
+        },
+        {
+            "attr": {
+                "data-background": "slides/bluemix5.png"
+            }
+        },
+        {
+            "attr": {
+                "data-background": "slides/bluemix6.png"
+            }
+        }
+    ],
+    "questions.md",
+    "thank-you.md"
+]

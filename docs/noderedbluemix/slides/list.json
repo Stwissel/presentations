@@ -1,0 +1,38 @@
+[
+  "index.md",
+  "agenda.md", [
+    "introduction.md",
+    "you-me.md",
+    "me.md",
+    "you.md",
+    "results.md"
+  ],
+  "backwards.md", [
+    "task1.md",
+    "task1-result.md",
+    "whatisnodered.md",
+    "concepts.md",
+    "task2.md",
+    "task3.md",
+    "morenodered.md",
+    "task4.md"
+  ],
+  [
+    "whathappened.md",
+    "sdlc.md"
+  ],
+  [
+    "mobile.md",
+    "mobile-dev.md"
+  ],
+
+  [
+    "bluemix.md",
+    "bluemix2.md",
+    "watson.md",
+    "watson-services.md",
+    "watson-services2.md",
+    "watson2.md"
+  ],
+  "questions.md"
+]

@@ -1,0 +1,24 @@
+[
+    "index.md",
+    "tl-tr.md",
+    "common-requirements.md",
+    [
+        "moving-parts.md",
+        "command-line.md",
+        "web-ui.md",
+        "web-ui2.md",
+        "explorer.md",
+        "blockdiagram.md"
+    ],
+    [
+        "big-deal.md",
+        "think-models.md",
+        "think-phases.md",
+        "authentication.md",
+        "authentication2.md",
+        "authorization.md",
+        "clever-extensions.md"
+    ],
+    "resources.md",
+    "questions.md"
+]

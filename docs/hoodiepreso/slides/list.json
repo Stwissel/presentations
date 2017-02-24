@@ -1,0 +1,78 @@
+[
+    "index.md",
+    "tltr.md",
+    "agenda.md",
+    [
+        "about-us.html",
+        "ibm.md",
+        "brain.md",
+        "clown.md"
+    ],
+    [{
+        "filename": "the-problem.md",
+        "attr": {
+            "data-background": "#ff0000"
+        }
+    },
+    {
+        "filename": "speedproblem.md",
+        "attr": {
+            "data-background": "#ff0000"
+        }
+    }],
+    {
+        "filename": "demo-time.md",
+        "attr": {}
+    },
+    {
+        "filename": "demo-results.md",
+        "attr": {}
+    },
+    {
+        "filename": "what-it-is-not.md",
+        "attr": {
+            "data-background": "#ff0000"
+        }
+    },
+    [
+        {
+            "filename": "architectureoverview.md",
+            "attr": {}
+        },
+        {
+            "filename": "architecture-1.md",
+            "attr": {}
+        },
+        {
+            "filename": "architecture-2.md",
+            "attr": {}
+        },
+        {
+            "filename": "architecture-3.md",
+            "attr": {
+            }
+        },
+        {
+            "filename": "architecture-4.md",
+            "attr": {}
+        }
+    ],
+    "samurai.html",
+     {
+        "filename": "apprentice.md",
+        "attr": {
+        }
+    },
+    {
+        "filename": "questions.md",
+        "attr": {
+            "color": "#FF0000",
+            "data-background": "#ffffff"
+        }
+    },
+    {
+        "filename": "thankyou.md",
+        "attr": {
+        }
+    }
+]

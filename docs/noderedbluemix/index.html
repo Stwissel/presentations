@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>IBM Bluemix and NodeRED</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+        <link rel="stylesheet" href="bower_components/reveal.js/css/theme/bluemix.css" id="theme">
+
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="bower_components/highlightjs/styles/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div style="position : absolute; top : 10px; left : 10px;">
+            <img src="slides/IBM-logo.jpg" title="IBM" />
+        </div>
+        <div style="position : absolute; top : 0; right : 0">
+            <img src="slides/ibm-bluemix.jpg" title="BlueMix" />
+        </div>
+        <div class="reveal">
+
+            <div class="slides">
+
+                
+                    
+                        
+    <section data-markdown="slides/index.md"></section>
+
+
+                    
+                    
+                
+                    
+                        
+    <section data-markdown="slides/agenda.md"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-markdown="slides/introduction.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/you-me.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/me.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/you.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/results.md"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-markdown="slides/backwards.md"></section>
+
+
+                    
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-markdown="slides/task1.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/task1-result.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/whatisnodered.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/concepts.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/task2.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/task3.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/morenodered.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/task4.md"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-markdown="slides/whathappened.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/sdlc.md"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-markdown="slides/mobile.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/mobile-dev.md"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                    
+                        <section>
+                            
+                                
+    <section data-markdown="slides/bluemix.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/bluemix2.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/watson.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/watson-services.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/watson-services2.md"></section>
+
+
+                            
+                                
+    <section data-markdown="slides/watson2.md"></section>
+
+
+                            
+                        </section>
+                    
+                
+                    
+                        
+    <section data-markdown="slides/questions.md"></section>
+
+
+                    
+                    
+                
+            </div>
+
+        </div>
+
+        <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+            // Optional reveal.js plugins
+            dependencies: [
+              { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+              { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+            ]
+          });
+
+        </script>
+    </body>
+
+</html>
