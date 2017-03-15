@@ -2,10 +2,11 @@
 
 ## Hackathlon, OpenSource and Meetups
 
-- [FossAsia 2015](fossasia2016/index.html)
-- [AngelHack 2015](angelhackmy/index.html)
-- [Echelon 2015](echelon/index.html)
-- [Hoodie 2015](hoodiepreso/index.html)
+- [AngelHack 2015](angelhackmy/index.html) - IBM Bluemix
+- [Echelon 2015](echelon2015/index.html) - IBM Bluemix
+- [FossAsia 2015](fossasia2015/index.html) - Run your cloud on open standards
+- [FossAsia 2016](fossasia2016/index.html) - IBM Design Thinking
+- [FossAsia 2017](fossasia2017/index.html) - Adventures in Blinkenlights
 
 ## IBM presentations
 
@@ -16,6 +17,7 @@
 
 ## TalkJS Singapore
 
-- [The LoopBack framework](talkjsloopback/index.html)
-- [Node Red](talkjsnodered/index.html)
-- [Vert.X](talkjsvertx/index.html)
+- [Hoodie](hoodiepreso/index.html) - Offline first applications
+- [The LoopBack framework](talkjsloopback/index.html) - Model driven nodejs applications  
+- [NodeRED](talkjsnodered/index.html) Visual app development
+- [Vert.X](talkjsvertx/index.html) JavaScript on the JVM
