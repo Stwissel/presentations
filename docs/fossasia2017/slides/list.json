@@ -1,0 +1,21 @@
+[
+    "index.md",
+    "about-me.md",
+    "the-challenge.md",
+    "the-setup.md",
+    "parameters.md",
+    [
+        "lights-galore.md",
+        "chaos.md",
+        "wakeup.md",
+        "reminder.md",
+        "incoming-call.md",
+        "visitor.md",
+        "weather-man.md",
+        "stock-portfolio.md",
+        "notification.md",
+        "cylon.md"
+    ],
+    "q-a.md",
+    "thank-you.md"
+]
