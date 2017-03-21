@@ -7,6 +7,7 @@
 - [FossAsia 2015](fossasia2015/index.html) - Run your cloud on open standards
 - [FossAsia 2016](fossasia2016/index.html) - IBM Design Thinking
 - [FossAsia 2017](fossasia2017/index.html) - Adventures in Blinkenlights
+- [APICraft Mar 2017](apicraft/index.html) - The untold story of API before JSON dropped in
 
 ## IBM presentations
 

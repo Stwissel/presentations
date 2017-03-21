@@ -1,0 +1,25 @@
+[
+    "index.md",
+    "about-me.md",
+    "before-json.md",
+    [
+        "edifact.md",
+        "edifact-sample.md"
+    ],
+    [
+        "xml.md",
+        "xml-structure.md",
+        "xml-standards.md",
+        "xml-schema.md",
+        "schema-list.md",
+        "schema-list2.md",
+        "schema-list3.md"
+    ],
+    [
+        "processing-xml.md",
+        "soap-rest.md",
+        "processing-xml-demo.md",
+        "processing-xml-demo2.md"
+    ],
+    "q-a.md"
+]
