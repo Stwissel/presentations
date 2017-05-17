@@ -22,3 +22,4 @@
 - [The LoopBack framework](talkjsloopback/index.html) - Model driven nodejs applications  
 - [NodeRED](talkjsnodered/index.html) Visual app development
 - [Vert.X](talkjsvertx/index.html) JavaScript on the JVM
+- [ngrx/store](talkjsngrxstore/index.html) Angular and ngrx/store (May 2017)
