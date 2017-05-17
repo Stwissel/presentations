@@ -1,0 +1,31 @@
+[
+    "index.md",
+    "aboutme.md",
+    [
+        "agenda.md",
+        "tl-tr.md"
+    ],
+    [
+        "flux.md",
+        "flux2.md"
+    ],
+    [
+        "stream.md",
+        "observables.md"
+    ],
+    "store.md",
+    "actions.md",
+    [
+        "reducers.md",
+        "reducers2.md",
+        "reducers3.md",
+        "reducers4.md"
+    ],
+    "effects.md",
+    [
+        "why.md",
+        "insights.md",
+        "realtime.md"
+    ],
+    "thank-you.md"
+]
