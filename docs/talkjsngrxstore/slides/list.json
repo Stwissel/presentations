@@ -21,7 +21,10 @@
         "reducers3.md",
         "reducers4.md"
     ],
-    "effects.md",
+    [
+        "effects.md",
+        "effects2.md"
+    ],
     [
         "why.md",
         "insights.md",
