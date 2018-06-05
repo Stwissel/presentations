@@ -8,6 +8,7 @@
 - [FossAsia 2016](fossasia2016/index.html) - IBM Design Thinking
 - [FossAsia 2017](fossasia2017/index.html) - Adventures in Blinkenlights
 - [APICraft Mar 2017](apicraft/index.html) - The untold story of API before JSON dropped in
+- [MelbJS June 2018](melbjs/index.html) - Introduction to NodeRED
 
 ## IBM presentations
 
