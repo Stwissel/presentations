@@ -1,0 +1,34 @@
+<script type="text/x-red" data-template-name="mynode">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+
+    <div class="form-row">
+        <label for="node-input-field"><i class="fa fa-tag"></i> Property</label>
+        <input type="text" id="node-input-field" placeholder="payload">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="mynode">
+	
+   <p>Gives you the final answer!</p>
+  
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('mynode',{
+        category: 'experimental', 
+        defaults: {
+            name: {value:""},
+            field: {value:""},           
+        },
+        inputs:1,
+        outputs:1,
+        icon: "mynode.png",
+        color : "#ffdddf",
+        label: function() {     // sets the default label contents
+            return this.name||"objectcleaner";
+        }
+    });
+</script>
