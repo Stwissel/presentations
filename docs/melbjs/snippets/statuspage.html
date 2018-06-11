@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <title>Status Report</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">&nbsp;</div>
+            <div class="col-6">
+                <legend>Submission Report</legend>
+                <ol id="submissions">
+                    <!-- submissions go there -->
+                </ol>
+                <a href="/angular">Submit your own</a>
+            </div>
+            <div class="col-3">&nbsp;</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var mySocket;
+        window.onload = function () {
+            var wsHost = "ws://" + window.location.hostname + "/ws/angular";
+            mySocket = new WebSocket(wsHost);
+            console.log("WebSocket created");
+            mySocket.onmessage = function (event) {
+                var submissions = document.getElementById("submissions");
+                var person = JSON.parse(event.data);
+                var personString = person.name + ", (" + person.email + ")"
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(personString));
+                submissions.appendChild(li);
+            };
+        }
+    </script>
+</body>
+
+</html>

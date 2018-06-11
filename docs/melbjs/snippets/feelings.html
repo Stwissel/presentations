@@ -1,0 +1,40 @@
+-- Instructions --
+
+<body style="background-color: #CCCCCF;">
+    <div style="background-color: white; margin : 30px; padding : 20px; border : solid 1px gray; font-family : Verdana, Arial">
+        <h1>Mood sample application</h1>
+        <p>This is the demo of a node-red developed mini application</p>
+        <p>You provide ?feel= to see a result</p>
+        <p>Why not try
+            <a href="/howdoyou?feel=good">feeling good!</a>
+        </p>
+    </div>
+</body>
+
+
+-- Good --
+
+<h1 style="padding: 30px; background-color : green; color : white; font-family : Verdana, Arial">
+    Glad to hear that you feel good!</h1>
+
+-- Bad --
+
+<h1 style="padding: 30px; background-color : red; color : white; font-family : Verdana, Arial">
+    Sorry to hear that you feel {{payload.feel}} :-(
+</h1>
+
+
+-- Flow -- [{"id":"381dc92d.45a576","type":"subflow","name":"Feelings","in":[{"x":70,"y":70,"wires":[{"id":"d9da48cf.ebca"}]}],"out":[{"x":597,"y":184,"wires":[{"id":"c323318a.f2b03","port":0},{"id":"a70a5a15.fce29","port":0},{"id":"1ed338d2.4940ef","port":0}]}]},{"id":"c323318a.f2b03","type":"template","z":"381dc92d.45a576","name":"Good","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+<h1 style=\ "padding: 30px; background-color : green; color : white; font-family : Verdana, Arial\">\nGlad to hear that you feel good!</h1>","x":423,"y":170,"wires":[[]]},{"id":"a70a5a15.fce29","type":"template","z":"381dc92d.45a576","name":"Sorry","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+<h1 style=\ "padding: 30px; background-color : red; color : white; font-family : Verdana, Arial\">\nSorry to hear that you feel {{payload.feel}} :-( \n</h1>","x":425,"y":218,"wires":[[]]},{"id":"d9da48cf.ebca","type":"switch","z":"381dc92d.45a576","name":"How","property":"payload.feel","rules":[{"t":"null"},{"t":"eq","v":"good"},{"t":"neq","v":"good"}],"checkall":"false","outputs":3,"x":239,"y":184,"wires":[["1ed338d2.4940ef"],["c323318a.f2b03"],["a70a5a15.fce29"]]},{"id":"1ed338d2.4940ef","type":"template","z":"381dc92d.45a576","name":"Instructions","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+
+<body style=\ "background-color: #CCCCCF;\">\n
+    <div style=\
+        "background-color: white; margin : 30px; padding : 20px; border : solid 1px gray; font-family : Verdana, Arial\">\n
+        <h1>Mood sample application</h1>\n
+        <p>This is the demo of a node-red developed mini application</p>\n
+        <p>You provide ?feel= to see a result</p>\n
+        <p>Why not try
+            <a href=\ "/howdoyou?feel=good\">feeling good!</a>
+        </p>\n</div>\n</body>","x":438,"y":130,"wires":[[]]},{"id":"c77b46ae.c0d698","type":"http in","z":"f078df0.b39352","name":"Input
+","url":"/howdoyou","method":"get","x":119,"y":98,"wires":[["46f31fed.a1f148"]]},{"id":"3b0f044a.85e024","type":"http response","z":"f078df0.b39352","name":"Out","x":539,"y":96,"wires":[]},{"id":"659898c0.ca6618","type":"debug","z":"f078df0.b39352","name":"","active":true,"console":"false","complete":"true","x":538,"y":153,"wires":[]},{"id":"46f31fed.a1f148","type":"subflow:381dc92d.45a576","z":"f078df0.b39352","x":297,"y":97,"wires":[["659898c0.ca6618","3b0f044a.85e024"]]}]

@@ -1,0 +1,178 @@
+-- Listen --
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<div class="container">
+    <div class="row">
+        <div class="col-3">&nbsp;</div>
+        <div class="col-6">
+            <form class="form-horizontal" method="POST" action="/angular">
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <div class="form-group">
+                        <label for="name" class="control-label col-sm-2">Name</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name please" required="" />
+                            <p class="help-block">How are you called?</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="control-label col-sm-2">eMail</label>
+                        <div class="col-sm-8">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email" required="" />
+                            <p class="help-block">We don't share - promised!</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="save" class="control-label col-sm-2">Just do it!</label>
+                        <div class="col-sm-8">
+                            <button type="submit" id="save" class="btn btn-primary" aria-label="Save">Save</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-3">&nbsp;</div>
+    </div>
+</div>
+
+-- Receive --
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+<div class="container">
+    <div class="row">
+        <div class="col-3">&nbsp;</div>
+        <div class="col-6">
+            <legend>Thank you for your submission</legend>
+            {{payload.name}}
+            <br /> {{payload.email}}
+            <br />
+            <a href="/angular">Submit more</a> -
+            <a href="/status">Submission status</a>
+        </div>
+        <div class="col-3">&nbsp;</div>
+    </div>
+</div>
+
+-- Status --
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" />
+    <title>Status Report</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">&nbsp;</div>
+            <div class="col-6">
+                <legend>Submission Report</legend>
+                <ol id="submissions">
+                    <!-- submissions go there -->
+                </ol>
+                <a href="/angular">Submit your own</a>
+            </div>
+            <div class="col-3">&nbsp;</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var mySocket;
+        window.onload = function () {
+            var wsHost = "ws://" + window.location.hostname + "/ws/angular";
+            mySocket = new WebSocket(wsHost);
+            console.log("WebSocket created");
+            mySocket.onmessage = function (event) {
+                var submissions = document.getElementById("submissions");
+                var person = JSON.parse(event.data);
+                var personString = person.name + ", (" + person.email + ")"
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(personString));
+                submissions.appendChild(li);
+            };
+        }
+    </script>
+</body>
+
+</html>
+
+-- Flow -- [{"id":"77d92ac8.1ab774","type":"websocket out","z":"86acbeec.5bc22","name":"WS Angular","server":"9e3873f7.8773b","client":"","x":630,"y":240,"wires":[]},{"id":"e590f45f.9c16c8","type":"inject","z":"86acbeec.5bc22","name":"Peter
+injector","topic":"","payload":"{\"name\" : \"Peter\", \"email\" : \"a@b.com\"}","payloadType":"json","repeat":"","crontab":"","once":false,"x":170,"y":240,"wires":[["77d92ac8.1ab774"]]},{"id":"8f5ed732.56e1b8","type":"http
+response","z":"86acbeec.5bc22","name":"","x":650,"y":100,"wires":[]},{"id":"a0791e19.e7038","type":"http in","z":"86acbeec.5bc22","name":"Listen
+to Angular","url":"/angular","method":"get","swaggerDoc":"","x":160,"y":100,"wires":[["debf066a.ae7488"]]},{"id":"debf066a.ae7488","type":"template","z":"86acbeec.5bc22","name":"Mini
+form","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+<link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css\">\n
+<link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css\">\n
+<div class=\ "container\">\n
+    <div class=\ "row\">\n
+        <div class=\ "col-3\">&nbsp;</div>\n
+        <div class=\ "col-6\">\n
+            <form class=\ "form-horizontal\" method=\ "POST\" action=\ "/angular\">\n
+                <fieldset>\n
+                    <legend>Contact Details</legend>\n
+                    <div class=\ "form-group\">\n
+                        <label for=\ "name\" class=\ "control-label col-sm-2\">Name</label>\n
+                        <div class=\ "col-sm-8\">\n
+                            <input type=\ "text\" class=\ "form-control\" id=\ "name\" name=\ "name\" placeholder=\ "Your Name please\" required=\
+                                "\" />\n
+                            <p class=\ "help-block\">How are you called?</p>\n </div>\n </div>\n
+                    <div class=\ "form-group\">\n
+                        <label for=\ "email\" class=\ "control-label col-sm-2\">eMail</label>\n
+                        <div class=\ "col-sm-8\">\n
+                            <input type=\ "email\" class=\ "form-control\" id=\ "email\" name=\ "email\" placeholder=\ "Your email\" required=\ "\" />\n
+                            <p class=\ "help-block\">We don't share - promised!</p>\n </div>\n </div>\n
+                    <div class=\ "form-group\">\n
+                        <label for=\ "save\" class=\ "control-label col-sm-2\">Just do it!</label>\n
+                        <div class=\ "col-sm-8\">\n
+                            <button type=\ "submit\" id=\ "save\" class=\ "btn btn-primary\" aria-label=\ "Save\">Save</button>\n </div>\n </div>\n </fieldset>\n </form>\n </div>\n
+        <div class=\ "col-3\">&nbsp;</div>\n </div>\n</div>","x":400,"y":100,"wires":[["8f5ed732.56e1b8"]]},{"id":"32200c34.fd7d74","type":"http
+response","z":"86acbeec.5bc22","name":"","x":650,"y":160,"wires":[]},{"id":"1c917f40.894d11","type":"http in","z":"86acbeec.5bc22","name":"Receive
+angular","url":"/angular","method":"post","swaggerDoc":"","x":160,"y":160,"wires":[["77d92ac8.1ab774","d9cfed8d.1e38b"]]},{"id":"d9cfed8d.1e38b","type":"template","z":"86acbeec.5bc22","name":"Submission
+thx","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+<link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css\">\n
+<link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css\">\n
+<div class=\ "container\">\n
+    <div class=\ "row\">\n
+        <div class=\ "col-3\">&nbsp;</div>\n
+        <div class=\ "col-6\">\n
+            <legend>Thank you for your submission</legend>\n {{payload.name}}
+            <br />\n {{payload.email}}
+            <br />\n Submit
+            <a href=\ "/angular\">more</a>\n </div>\n
+        <div class=\ "col-3\">&nbsp;</div>\n </div>\n</div>","x":420,"y":160,"wires":[["32200c34.fd7d74"]]},{"id":"d4c34d49.48498","type":"websocket
+out","z":"86acbeec.5bc22","name":"What time is it","server":"8180c681.316eb8","client":"","x":620,"y":340,"wires":[]},{"id":"4c098279.307edc","type":"inject","z":"86acbeec.5bc22","name":"Send
+time","topic":"TellTime","payload":"","payloadType":"date","repeat":"60","crontab":"","once":true,"x":170,"y":340,"wires":[["d4c34d49.48498"]]},{"id":"1beda4f4.45451b","type":"http
+in","z":"86acbeec.5bc22","name":"Statuspage","url":"/statuspage","method":"get","swaggerDoc":"","x":146.5,"y":417,"wires":[["f3ab91b6.ed5d2"]]},{"id":"cd1335b1.9d3fa8","type":"http
+response","z":"86acbeec.5bc22","name":"","x":606.5,"y":415,"wires":[]},{"id":"f3ab91b6.ed5d2","type":"template","z":"86acbeec.5bc22","name":"","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"
+<!DOCTYPE html>\n
+<html lang=\ "en\">\n\n
+
+<head>\n
+    <meta charset=\ "UTF-8\">\n
+    <meta name=\ "viewport\" content=\ "width=device-width, initial-scale=1.0\">\n
+    <meta http-equiv=\ "X-UA-Compatible\" content=\ "ie=edge\">\n
+    <link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css\" />\n
+    <link rel=\ "stylesheet\" href=\ "//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css\" />\n
+    <title>Status Report</title>\n</head>\n\n
+
+<body>\n\n
+    <div class=\ "container\">\n
+        <div class=\ "row\">\n
+            <div class=\ "col-3\">&nbsp;</div>\n
+            <div class=\ "col-6\">\n
+                <legend>Submission Report</legend>\n
+                <ol id=\ "submissions\">\n
+                    <!-- submissions go there -->\n </ol>\n
+                <a href=\ "/angular\">Submit your own</a>\n </div>\n
+            <div class=\ "col-3\">&nbsp;</div>\n </div>\n </div>\n
+    <script type=\ "text/javascript\">\n        var mySocket;\n        window.onload = function () {\n            var wsHost = \"ws://\" + window.location.hostname + \"/ws/angular\";\n            mySocket = new WebSocket(wsHost);\n            console.log(\"WebSocket created\");\n            mySocket.onmessage = function (event) {\n                var submissions = document.getElementById(\"submissions\");\n                var person = JSON.parse(event.data);\n                var personString = person.name + \", (\" + person.email + \")\"\n                var li = document.createElement(\"li\");\n                li.appendChild(document.createTextNode(personString));\n                submissions.appendChild(li);\n            };\n        }\n    </script>\n</body>\n\n
+
+</html>","x":377.5,"y":417,"wires":[["cd1335b1.9d3fa8"]]},{"id":"9e3873f7.8773b","type":"websocket-listener","z":"","path":"/ws/angular","wholemsg":"false"},{"id":"8180c681.316eb8","type":"websocket-listener","z":"","path":"/ws/time","wholemsg":"false"}]
