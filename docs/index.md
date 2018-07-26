@@ -9,6 +9,7 @@
 - [FossAsia 2017](fossasia2017/index.html) - Adventures in Blinkenlights
 - [APICraft Mar 2017](apicraft/index.html) - The untold story of API before JSON dropped in
 - [MelbJS June 2018](melbjs/index.html) - Introduction to NodeRED
+- [Atlassian July 2018](atlassianblog/index.html) - The Blog, adventures in Pipes and APIs
 
 ## IBM presentations
 
