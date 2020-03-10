@@ -2,7 +2,7 @@
     "index.md",
     {
         "attr": {
-            "data-background": "slides/images/wordle.png",
+            "data-background": "slides/img/wordle.png",
             "data-background-size": "contain"
         }
     },
@@ -12,7 +12,7 @@
         "stephan.html",
         {
             "attr": {
-                "data-background": "slides/images/NoHarm.png",
+                "data-background": "slides/img/NoHarm.png",
                 "data-background-size": "contain"
             }
         },

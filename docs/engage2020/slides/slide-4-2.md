@@ -1,3 +1,3 @@
 # Hoodies
 
-<img data-src="slides/images/Developer.jpg" height="500" alt="Developer" />
+<img data-src="slides/img/Developer.jpg" height="500" alt="Developer" />

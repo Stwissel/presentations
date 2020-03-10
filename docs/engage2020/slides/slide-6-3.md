@@ -1,3 +1,3 @@
 ## Form Modes
 
-![Form Modes](slides/images/FormModes.png)
+![Form Modes](slides/img/FormModes.png)

@@ -4,4 +4,4 @@
 -   Not a champion
 -   Not a master
 
-![Stephan](slides/images/stephan.png)
+![Stephan](slides/img/stephan.png)

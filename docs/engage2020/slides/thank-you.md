@@ -1,3 +1,3 @@
 ## Thank you
 
-![Keep Family](slides/images/keepfamily.png)
+![Keep Family](slides/img/keepfamily.png)
