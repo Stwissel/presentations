@@ -10,6 +10,7 @@
 - [APICraft Mar 2017](apicraft/index.html) - The untold story of API before JSON dropped in
 - [MelbJS June 2018](melbjs/index.html) - Introduction to NodeRED
 - [Atlassian July 2018](atlassianblog/index.html) - The Blog, adventures in Pipes and APIs
+- [OpenAPI, December 2013](openapi/index.html) - the what, why and how of OpenAPI
 
 ## IBM presentations
 
@@ -21,9 +22,9 @@
 ## TalkJS Singapore
 
 - [Hoodie](hoodiepreso/index.html) - Offline first applications
-- [The LoopBack framework](talkjsloopback/index.html) - Model driven nodejs applications  
+- [The LoopBack framework](talkjsloopback/index.html) - Model driven nodejs applications
 - [NodeRED](talkjsnodered/index.html) Visual app development
-- [Vert.X](talkjsvertx/index.html) JavaScript on the JVM
+- [vert.x](talkjsvertx/index.html) JavaScript on the JVM
 - [ngrx/store](talkjsngrxstore/index.html) Angular and ngrx/store (May 2017)
 
 ## HCL

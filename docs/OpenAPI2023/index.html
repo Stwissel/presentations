@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>OpenAPI - the what, why and how</title>
+
+    <meta
+      name="description"
+      content="OpenAPI the contract defining your REST API"
+    />
+    <meta name="author" content="Stephan H. Wissel" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section
+          data-background="slides/OpenApiLogo.png"
+          data-background-size="contain"
+        ></section>
+        <section
+          data-markdown="slides/aboutme.md"
+          data-background="slides/stw-in-mud-2023.jpg"
+        ></section>
+        <section data-markdown="slides/agenda.md"></section>
+
+        <section>
+          <section>
+            <h2>What is it?</h2>
+            <p style="text-align: left;">
+              The OpenAPI Specification is a specification language for HTTP
+              APIs that provides a standardized means to define your API to
+              others. You can quickly discover how an API works, configure
+              infrastructure, generate client code, and create test cases for
+              your APIs. Read more about how you can get control of your APIs
+              now, understand the full API lifecycle and communicate with
+              developer communities inside and outside your organization. (<a
+                href="https://www.openapis.org"
+                target="_blank"
+                >Source</a
+              >)
+            </p>
+          </section>
+          <section data-markdown># Alles klar?</section>
+          <section
+            data-background="slides/wedding.jpg"
+            data-background-size="contain"
+            data-background-color="white"
+          ></section>
+          <section data-markdown># A lifelong contract</section>
+          <section data-markdown="slides/movingparts.md"></section>
+          <section
+            data-background="slides/openapi-block.png"
+            data-background-size="contain"
+            data-background-color="white"
+          ></section>
+          <section data-markdown="slides/key-properties.md"></section>
+          <section
+            data-background="slides/swagger.png"
+            data-background-size="contain"
+            data-background-color="white"
+          ></section>
+          <section data-markdown="slides/tooling.md"></section>
+        </section>
+
+        <section>
+          <h2>Demo</h2>
+        </section>
+
+        <section>
+          <section data-auto-animate>
+            <h2 data-id="code-title">Evolution of a specification</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs yaml" data-trim data-line-numbers="|6|7-13|14-17">
+				title: Root Type for Toy
+				description: |-
+					Something big and small like to play with.
+					Inanimate, but eventual animatronic.
+					Definitely not a pet or a human
+				type: object
+				properties:
+					Name:
+						type: string
+					Color:
+						type: string
+					Shape:
+						type: string
+				example:
+					Name: Matchbox
+					Color: red
+					Shape: Zylinder
+				</code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">missed the {}?</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs json" data-trim data-line-numbers="|4|5-14|16-20">
+				{
+					"title": "Root Type for Toy",
+					"description": "Something big and small like to play with.\nInanimate, but eventual animatronic.\nDefinitely not a pet or a human",
+					"type": "object",
+					"properties": {
+						"Name": {
+							"type": "string"
+						},
+						"Color": {
+							"type": "string"
+						},
+						"Shape": {
+							"type": "string"
+						}
+					},
+					"example": {
+						"Name": "Matchbox",
+						"Color": "red",
+						"Shape": "Zylinder"
+					}
+				}
+				</code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">Strict on input</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs yaml" data-trim data-line-numbers="|6|14">
+				title: Root Type for Toy
+				description: |-
+					Something big and small like to play with.
+					Inanimate, but eventual animatronic.
+					Definitely not a pet or a human
+				type: object
+				properties:
+					Name:
+						type: string
+					Color:
+						type: string
+					Shape:
+						type: string
+				additionalProperties: false
+				example:
+					Name: Matchbox
+					Color: red
+					Shape: Zylinder
+				</code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">Mandating fields</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs yaml" data-ln-start-from="6" data-trim data-line-numbers="|1-3|8">
+				required:
+					- Name
+					- Color
+				type: object
+				properties:
+					Name:
+						description: How will your kid call it?
+						minLength: 3
+						type: string
+					Color:
+						type: string
+					Shape:
+						type: string
+				additionalProperties: false
+				</code></pre>
+          </section>
+
+          <section data-auto-animate>
+            <h2 data-id="code-title">selecting choices</h2>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs yaml" data-ln-start-from="6" data-trim data-line-numbers="|10-15">
+				required:
+					- Name
+					- Color
+				type: object
+				properties:
+					Name:
+						description: How will your kid call it?
+						minLength: 3
+						type: string
+					Color:
+						enum:
+							- red
+							- green
+							- yellow
+						type: string
+					Shape:
+						type: string
+				additionalProperties: false
+				</code></pre>
+          </section>
+
+		  <section>
+			<h2>Demo</h2>
+		  </section>
+
+          <section data-background-color="#000066">
+            <h2>Many more</h2>
+            <ul>
+              <li>Min / Max</li>
+              <li>Arrays</li>
+              <li>Mixed types</li>
+              <li>Regext</li>
+              <li>Date / time</li>
+              <li>Custom data types</li>
+            </ul>
+            <p></p>
+            <h3>Missing: custom functions</h3>
+          </section>
+        </section>
+
+        <section>
+          <section
+            data-background="slides/questions.jpg"
+            data-background-size="contain"
+            data-background-color="white"
+          >
+            <h1>Q & A</h1>
+          </section>
+          <section data-markdown="slides/thankyou.md"></section>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // Also available as an ES module, see:
+      // https://revealjs.com/initialization/
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight
+        ]
+      });
+    </script>
+  </body>
+</html>
