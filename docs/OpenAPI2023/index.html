@@ -28,6 +28,11 @@
   </head>
 
   <body>
+    <div
+      style="text-align: center; position: absolute; bottom: 10px; color: white"
+    >
+      No powerpoint has been harmed creating this presentation
+    </div>
     <div class="reveal">
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
@@ -40,20 +45,45 @@
           data-background="slides/stw-in-mud-2023.jpg"
         ></section>
         <section data-markdown="slides/agenda.md"></section>
-
         <section>
+          <section data-markdown="slides/rest.md"></section>
+          <section
+            data-background="slides/restprinciples.png"
+            data-background-size="contain"
+          ></section>
           <section>
-            <h2>What is it?</h2>
-            <p style="text-align: left;">
-              The OpenAPI Specification is a specification language for HTTP
-              APIs that provides a standardized means to define your API to
-              others. You can quickly discover how an API works, configure
-              infrastructure, generate client code, and create test cases for
-              your APIs. Read more about how you can get control of your APIs
-              now, understand the full API lifecycle and communicate with
-              developer communities inside and outside your organization. (<a
-                href="https://www.openapis.org"
-                target="_blank"
+            <h2>OpenAPI - What is it?</h2>
+            <p style="text-align: left">
+              The OpenAPI Specification is a
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >specification</span
+              >
+              language for
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >HTTP APIs</span
+              >
+              that provides a standardized means to define your API to
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >others</span
+              >. You can quickly
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >discover</span
+              >
+              how an API works, configure infrastructure,
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >generate</span
+              >
+              client code, and create
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >test</span
+              >
+              cases for your APIs. Read more about how you can get
+              <span style="color: red; font-weight: bold; font-size: larger"
+                >control</span
+              >
+              of your APIs now, understand the full API lifecycle and
+              communicate with developer communities inside and outside your
+              organization. (<a href="https://www.openapis.org" target="_blank"
                 >Source</a
               >)
             </p>
@@ -77,13 +107,12 @@
             data-background-size="contain"
             data-background-color="white"
           ></section>
-          <section data-markdown  data-background-color="#660000">
-            # Name confusion?
-
-            - OpenAPI (3.x) is the name of the Specification
-            - Until 2.x it was called "Swagger"
-            - Swagger UI is one way to show an API ([RedDoc](https://github.com/Redocly/redoc) is another)
-            - Swagger is colloquially used for OpenAPI like "Scotch Tape" for "sticky Tape" (unless you are German)
+          <section data-markdown data-background-color="#660000">
+            # Name confusion? - OpenAPI (3.x) is the name of the Specification -
+            Until 2.x it was called "Swagger" - Swagger UI is one way to show an
+            API ([ReDoc](https://github.com/Redocly/redoc) is another) - Swagger
+            is colloquially used for OpenAPI like "Scotch Tape" for "sticky
+            Tape" (unless you are German)
           </section>
           <section data-markdown="slides/tooling.md"></section>
         </section>
@@ -221,36 +250,77 @@
 				</code></pre>
           </section>
 
-		  <section>
-			<h2>Demo</h2>
-		  </section>
-
+          <section>
+            <h2>Demo</h2>
+          </section>
           <section data-background-color="#000066">
             <h2>Many more</h2>
-            <ul>
+            <div style="float: inline-start;">
+              <ul>
               <li>Min / Max</li>
               <li>Arrays</li>
               <li>Mixed types</li>
-              <li>Regext</li>
-              <li>Date / time</li>
-              <li>Custom data types</li>
             </ul>
-            <p></p>
-            <h3>Missing: custom functions</h3>
-          </section>
+            </div>
+            <div style="float: inline-end;">
+              <ul>
+                <li>Regex</li>
+                <li>Date / time</li>
+                <li>Custom data types</li>
+              </ul>
+            </div>
+            <h3 style="clear: both; padding-top: 50px;">Missing</h3>
+            <ul>
+              <li>custom functions</li>
+              <li>cross item constrains</li>
+            </ul>
+      </section>
         </section>
-<section>
-  <h1>WHere to use</h1>
-</section>
         <section>
+          <section>
+            <h1>Where to use</h1>
+            <h3>and where not</h3>
+          </section>
           <section
-            data-background="slides/questions.jpg"
+            data-background="slides/HammerScrew.jpg"
             data-background-size="contain"
             data-background-color="white"
-          >
-            <h1>Q & A</h1>
+          ></section>
+          <section data-background-color="#FF6600">
+              <h2>Separation of control</h2>
+            <div style="float: inline-start;">
+              <h3>OpenAPI</h3>
+              <ul>
+              <li>URL shape & params</li>
+              <li>basic validation</li>
+              <li>Security choices</li>
+              <li>documentation</li>
+            </ul>
+            </div>
+            <div style="float: inline-end;">
+              <h3>Java</h3>
+              <ul>
+                <li>implement security</li>
+                <li>complex validation</li>
+                <li>Custom data types</li>
+                <li>deal with optional params</li>
+                <li>map to data model</li>
+              </ul>
+            </div>
+            <p style="clear: both; "-</p>
           </section>
-          <section data-markdown="slides/thankyou.md"></section>
+            <section data-markdown="slides/impact.md"></section>
+            <section data-markdown="slides/doanddont.md"></section>
+          </section>
+          <section>
+            <section
+              data-background="slides/questions.jpg"
+              data-background-size="contain"
+              data-background-color="white"
+            >
+              <h1>Q & A</h1>
+            </section>
+            <section data-markdown="slides/thankyou.md"></section>
           </section>
         </section>
       </div>
