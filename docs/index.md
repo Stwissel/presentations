@@ -10,7 +10,7 @@
 - [APICraft Mar 2017](apicraft/index.html) - The untold story of API before JSON dropped in
 - [MelbJS June 2018](melbjs/index.html) - Introduction to NodeRED
 - [Atlassian July 2018](atlassianblog/index.html) - The Blog, adventures in Pipes and APIs
-- [OpenAPI, December 2013](openapi/index.html) - the what, why and how of OpenAPI
+- [OpenAPI, December 2023](OpenAPI2023/index.html) - the what, why and how of OpenAPI
 
 ## IBM presentations
 
